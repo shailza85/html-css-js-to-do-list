@@ -5,6 +5,7 @@
         <title>html-css-js-to-do-list-assignment-shailza85</title>
         <meta name="description" content="to-do-list">
         <meta name="author" content="TechCarrers">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/scripts.js" defer></script>
     </head>
     <body>
@@ -13,26 +14,32 @@
             
         </header>
         <main>
-            <h2>To-Do Form</h2>
-            <label for ="new task">New Task:</label>
-            <input id ="newtask" name ="newtask" placeholder ="This is a to-do-item" type =text>
-            <input id ="taskbutton" name ="taskbutton" type="submit" value="Add To-Do">
-
-            <h2>Active To-Dos</h2>
-            <ul>
-                <li>
-                    <input id="chkbox" name="chkbox" type="checkbox" value="This is a to-do item">
-                    <label for="chkbox">This is a to-do item</label>
-                    <input id ="deletebutton" name ="deletebutton" type="submit" value="Delete">
-                </li>
-            </ul>
-            <h2>Completed To-Dos</h2>
-            <ul>
-                <li>
-                   <label for="completedToDos">Do a thing</label>
-                    <input id ="deletebutton" name ="deletebutton" type="submit" value="Delete">
-                </li>
-            </ul>
+            <form>
+                <h2>To-Do Form</h2>
+                <div>
+                    <label for ="new task">New Task:</label>
+                    <input id ="newtask" name ="newtask" placeholder ="This is a to-do-item" type ="text">
+                    
+                    <button type="button" onclick="ButtonClick_InputText();">Add To-Do</button>
+                </div>
+                <h2>Active To-Dos</h2>
+                <div id="addTask">
+                    <ul>
+                        <li class="listaddtask">
+                            <input id="chkbox" name="chkbox" type="checkbox" value="This is a to-do item">
+                            <div id="box1"></div>
+                            <input id ="deletebutton" name ="deletebutton" type="submit" value="Delete" style="width: 70px;">
+                        </li>
+                    </ul>
+                </div>
+                <h2>Completed To-Dos</h2>
+                <ul>
+                    <li>
+                    <label for="completedToDos">Do a thing</label>
+                        <input id ="deletebutton" name ="deletebutton" type="submit" value="Delete">
+                    </li>
+                </ul>
+           </form> 
         </main>
     </body>
 
