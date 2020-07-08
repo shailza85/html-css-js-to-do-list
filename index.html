@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>html-css-js-to-do-list-assignment-shailza85</title>
-        <meta name="description" content="to-do-list">
-        <meta name="author" content="TechCarrers">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/scripts.js" defer></script>
-    </head>
-    <body>
-        <header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>html-css-js-to-do-list-assignment-shailza85</title>
+    <meta name="description" content="to-do-list">
+    <meta name="author" content="TechCarrers">
+    <!--<link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="mainForm">
             <h1>To-Do App</h1>
-            
-        </header>
-        <main>
-            <form>
-                <h2>To-Do Form</h2>
-                <div>
-                    <label for ="new task">New Task:</label>
-                    <input id ="newtask" name ="newtask" placeholder ="This is a to-do-item" type ="text">
-                    
-                    <button type="button" onclick="ButtonClick_InputText();">Add To-Do</button>
-                </div>
-                <h2>Active To-Dos</h2>
-                <div id="addTask">
-                    <ul>
-                        <li class="listaddtask">
-                            <input id="chkbox" name="chkbox" type="checkbox" value="This is a to-do item">
-                            <div id="box1"></div>
-                            <input id ="deletebutton" name ="deletebutton" type="submit" value="Delete">
-                        </li>
-                    </ul>
-                </div>
-                <h2>Completed To-Dos</h2>
-                <ul>
-                    <li>
-                    <label for="completedToDos">Do a thing</label>
-                        <input id ="deletebutton" name ="deletebutton" type="submit" value="Delete">
+            <h2>To-Do Form</h2>
+            <div>
+                <label for="new task">New Task:</label>
+                <input id="newtask" name="newtask" placeholder="This is a to-do-item" type="text">
+
+                <button type="button" onclick="ButtonClick_InputText();">Add To-Do</button>
+            </div>
+            <h2>Active To-Dos</h2>
+            <div id="addTask">
+                <ul class="emptyList">
+                    <li class="listaddtask">
+                        <input id="chkbox" name="chkbox" type="checkbox" value="This is a to-do item"
+                            onclick="AddTask_List();">
+                        <div id="box1"></div>
+                        <input id="deletebutton" name="deletebutton" type="submit" value="Delete">
                     </li>
                 </ul>
-           </form> 
-        </main>
-    </body>
+            </div>
+            <h2>Completed To-Dos</h2>
+            <div id="cTask">
+                <ul>
+                    <li class="listaddtask">
+                        <div id="compTask"></div>
+                        <input id="deletebutton" name="deletebutton" type="submit" value="Delete">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
 
 </html>

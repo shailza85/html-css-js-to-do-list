@@ -1,11 +1,44 @@
+*{
+    box-sizing:border-box;
+}
+
+/*body { 
+    
+    display: flex;
+    justify-content: flex-start;
+}*/
+
+.mainForm {
+    width:100%;
+    
+}
+
 .listaddtask { 
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
-#deletebutton{
-    
-max-width: 70px;
 
-   
+#box1>p {
+    margin:0px;
 }
+
+#compTask>p {
+    margin:0px;
+}
+
+ul.emptyList {
+
+    list-style: none;
+
+    padding: 0; 
+
+}
+ul {
+    margin: 10px 0;
+    list-style: circle;
+    padding: 0 20px;
+}
+ul li {
+    margin: 5px 0;
+    }
