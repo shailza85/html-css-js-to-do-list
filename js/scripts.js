@@ -5,7 +5,7 @@ const para = document.querySelector("p");
 const frm = document.querySelector("form");
 const PBox1 = document.querySelector("box1");
 const comptTask = document.querySelector("compTask");
-//const inputText=document.querySelector("newTask");
+const error=document.querySelector("listError");
 
 let inputText;
 let addedText;
@@ -21,7 +21,7 @@ function ButtonClick_InputText() {
     // @link https://stackoverflow.com/questions/27869606/remove-time-from-gmt-time-format
     var newDate = new Date().toLocaleString();
     var dateTime = newDate;
-    let inputText = document.getElementById("newtask");
+    let inputText = document.getElementById("newtask").value;
     addedText = document.getElementById('box1').innerHTML = "<p>" + inputText + " " + "<b>" + "Start:" + "</b>" + " " + dateTime + "</p>";
 
     let inputError = false;
@@ -30,31 +30,32 @@ function ButtonClick_InputText() {
         inputError = true;
         }
 
-    if(listArr.includes(inputText.value.trim().toLowercase()))
+    if(listArr.includes(inputText.value.trim().toLowerCase()))
     {
         error.innerText = "Sorry, the item already exists.";
         inputError = true;
     }
 
-    if(inputText.value.trim() !== "" && !listArr.includes(inputText.value.trim().toLowercase()))
+    if(inputText.value.trim() !== "" && !listArr.includes(inputText.value.trim().toLowerCase()))
 
     if(!inputError)
     {
         error.innerText=""; 
       
+        let newItem =document.createElement("li");
+        newItem.innerText = inputText.value.trim();
 
-        listArr.push(inputText.value.trim().toLowercase());
+        listArr.push(inputText.value.trim().toLowerCase());
 
-        if(list.className=== "emptyList")
+        if(list.className === "emptyList")
         {
             list.classList.remove("emptyList");
             list.children[0].remove();
         }
+            list.appendChild(newItem);
             inputText.value= "";
             inputText.focus();
     }
-    
-
 }
 
 function AddTask_List() {
