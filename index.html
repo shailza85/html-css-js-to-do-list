@@ -13,35 +13,32 @@
 
 <body>
     <main>
-        <div class="mainForm">
-            <h1>To-Do App</h1>
-            <h2>To-Do Form</h2>
-            <div>
-                <label for="new task">New Task:</label>
-                <input id="newtask" name="newtask" placeholder="This is a to-do-item" type="text">
-                <button type="button" onclick="ButtonClick_InputText();">Add To-Do</button>
-            </div>
-            <p id ="listError"></p>
-            <h2>Active To-Dos</h2>
-            <div id="addTask">
-                <ul class="emptyList">
-                    <li class="listaddtask">
-                        <input id="chkbox" name="chkbox" type="checkbox" value="This is a to-do item"
+        <div class="container">
+            <form>
+                <h1>To-Do App</h1>
+                <h2>To-Do Form</h2>
+                <div class= "todoform">
+                    <label for="new task">New Task:</label>
+                    <input id="newtask" name="newtask" placeholder="This is a to-do-item" type="text">
+                    <input id="addInput" name="addInput" type="submit" value="Add To-Do">
+                </div>
+                <p id="listError"></p>
+                <h2>Active To-Dos</h2>
+                <div id="addTask">
+                    <ul class="emptyList">
+                       <input id="chkbox" name="chkbox" type="checkbox" value="This is a to-do item" 
                             onclick="AddTask_List();">
-                        <div id="box1"></div>
                         <input id="deletebutton" name="deletebutton" type="submit" value="Delete">
-                    </li>
-                </ul>
-            </div>
-            <h2>Completed To-Dos</h2>
-            <div id="cTask">
-                <ul>
-                    <li class="listaddtask">
+                    </ul>
+                </div>
+                <h2>Completed To-Dos</h2>
+                <div id="cTask">
+                    <ul>
                         <div id="compTask"></div>
                         <input id="deletebutton" name="deletebutton" type="submit" value="Delete">
-                    </li>
-                </ul>
-            </div>
+                        </ul>
+                </div>
+            </form>
         </div>
     </main>
 </body>
