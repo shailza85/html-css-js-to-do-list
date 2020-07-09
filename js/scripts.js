@@ -24,22 +24,23 @@ inputButton.addEventListener("click", function() {
         var newDate = new Date().toLocaleString();
         var dateTime = newDate;
         let inputText = document.getElementById("newtask").value;
-        let newItem = document.createElement("li");
-        newItem.innerHTML = inputText + " " + "<b>" + "Start:" + "</b>" + " " + dateTime;
-        list.appendChild(newItem);
+        
 
 
         let inputError = false;
         if (inputText.trim() === "") {
             error.innerText = "Sorry, no item is enetered. Please type in to add an item.";
             inputError = true;
+            
+           
         }
 
         if (listArr.includes(inputText.trim().toLowerCase())) {
             
             error.innerText = "Sorry, the item already exists.";
-
+            let newItem = document.createElement("li");
             inputError = true;
+            
 
         }
 
@@ -48,7 +49,9 @@ inputButton.addEventListener("click", function() {
             if (!inputError) {
                 error.innerText = "";
 
-
+                let newItem = document.createElement("li");
+                newItem.innerHTML = inputText + " " + "<b>" + "Start:" + "</b>" + " " + dateTime;
+                list.appendChild(newItem);
                 listArr.push(inputText.trim().toLowerCase());
 
                 if (list.className === "emptyList") {
