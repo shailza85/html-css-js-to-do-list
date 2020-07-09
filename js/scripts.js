@@ -6,6 +6,7 @@ const frm = document.querySelector("form");
 const inputButton = document.getElementById("addInput");
 const comptTask = document.querySelector("compTask");
 const error = document.getElementById("listError");
+const input = document.getElementById("newtask");
 
 let inputText;
 let addedText;
@@ -35,7 +36,9 @@ inputButton.addEventListener("click", function() {
         }
 
         if (listArr.includes(inputText.trim().toLowerCase())) {
+            
             error.innerText = "Sorry, the item already exists.";
+
             inputError = true;
 
         }
@@ -54,13 +57,11 @@ inputButton.addEventListener("click", function() {
 
                 }
 
-
-
             }
     //}
-    inputText = "";
-    inputText.focus();
-    event.preventDefault();
+          input.value ="";
+          input.focus();  
+      event.preventDefault();
 }
 );
 function AddTask_List()
