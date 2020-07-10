@@ -97,6 +97,15 @@ inputButton.addEventListener("click", function () {
 );
 
 function AddTask_List() {
+
+ compTask.appendChild(list.children[2]);
+   
+}
+
+if(!compTask.lastChild=="") 
+{
+ let chBox=document.getElementById("chkbox").disabled="true";
+    compTask.appendChild(chbox);
     compTask.appendChild(list.children[2]);
 }
 
@@ -111,6 +120,7 @@ delButton.addEventListener("click", () => {
 delButton1.addEventListener("click", () => {
 
     compTask.children[0].remove();
+    
 
 });
 
