@@ -6,7 +6,9 @@ const error = document.querySelector("#listError");
 const input = document.querySelector("#newtask");
 const delButton = document.querySelector("#deletebutton");
 const delButton1 = document.querySelector("#deletebutton1");
-const clearTask = document.querySelector("#addTask");
+const addedTask = document.querySelector("#addTask");
+const compTaskDiv= document.createElement("input");
+
 
 
 let inputText;
@@ -14,9 +16,6 @@ let listArr = [];
 
 
 inputButton.addEventListener("click", function () {
-    //function ButtonClick_InputText() {
-
-
     // @link https://www.w3schools.com/js/js_dates.asp
     // @link https://stackoverflow.com/questions/27869606/remove-time-from-gmt-time-format
     // @link https://github.com/TECHCareers-by-Manpower/js-practice/commit/b5822168f20a8a98c20095728bd7af71175cbbeb
@@ -88,26 +87,30 @@ inputButton.addEventListener("click", function () {
             // }
             list.appendChild(newItem);
             input.value = "";
-            input.focus();
+            input.focus();  
             
+            if(true)
+          { 
+              console.log("test1123");          
+            comptTask.appendChild(list.children[2]);            
+           }
+                        
         }
-    //}
+
+        
+        
+    
     event.preventDefault();
 }
 );
 
-function AddTask_List() {
+/*function AddTask_List() {
 
  compTask.appendChild(list.children[2]);
    
-}
+}*/
 
-if(!compTask.lastChild=="") 
-{
- let chBox=document.getElementById("chkbox").disabled="true";
-    compTask.appendChild(chbox);
-    compTask.appendChild(list.children[2]);
-}
+
 
 // @ link https://github.com/TECHCareers-by-Manpower/js-practice/blob/master/Image%20Gallery/js/scripts.js
 
