@@ -92,13 +92,10 @@ inputButton.addEventListener("click", function () {
             if(true)
           { 
               console.log("test1123");          
-            comptTask.appendChild(list.children[2]);            
+            compTask.appendChild(list.children[2]);            
            }
                         
-        }
-
-        
-        
+        }        
     
     event.preventDefault();
 }
