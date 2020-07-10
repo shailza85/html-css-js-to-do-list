@@ -2,13 +2,26 @@
     box-sizing:border-box;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cadetblue;
+}
 /*@ link https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form*/
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
+        border-radius: 5px;
+        background-color:aliceblue;
+        padding: 20px;
+        width: 700px;
+        align-items: center;
+    }
+    
+  
   input[type=text] {
     width: 100%;
     padding: 12px;
@@ -38,7 +51,7 @@ h1,h2{
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    
+    color: teal;    
     text-align: center;   
 }
 #addTask, #cTask { 
@@ -53,21 +66,13 @@ h1,h2{
     
 }
 
-/*#box1>p {
-    margin:0px;
-}
-
-#compTask>p {
-    margin:0px;
-}*/
-
-ul.emptyList {
+/*ul.emptyList {
 
     list-style: none;
 
     padding: 0; 
 
-}
+}*/
 ul {
     margin: 10px 0;
     list-style: disc;
@@ -75,4 +80,25 @@ ul {
 }
 ul li {
     margin: 5px 0;
+    
+}
+.delete {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  #listError {           /*@ link https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form*/
+
+    font-size: 15px;
+    margin: 10px 0;
+    color: red;
+    font-weight: bold;
+    padding: 10px;
+
 }
