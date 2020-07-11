@@ -41,6 +41,7 @@ inputButton.addEventListener("click", function () {
             error.innerText = "";
 
             let newItem = document.createElement("li");
+   
             newItem.innerHTML = inputText.trim() + " " + "<b>" + "Start:" + "</b>" + " " + dateTime;
 
             listArr.push(inputText.trim().toLowerCase());
@@ -57,11 +58,9 @@ inputButton.addEventListener("click", function () {
 // Code borrowed to get the concept of EventListner function
 
 delButton.addEventListener("click", () => {
-    if(true) {
+   
     list.children[2].remove();
-    //let remActive=document.querySelector("#addTask > ul > li");
-    //remActive.remove();
-   } 
+    
 });
 
 function AddTask_List() {
@@ -74,6 +73,7 @@ function AddTask_List() {
     chBox.name = "checkbox1";
     chBox.value = "checkbox";
     chBox.id = "checkbox1";
+    chBox.checked = "true";
     chBox.disabled = "true";
 
     compTask.appendChild(chBox);
