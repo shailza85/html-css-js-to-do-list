@@ -1,7 +1,7 @@
 
 const list = document.querySelector("ul");
 const inputButton = document.querySelector("#addInput");
-const comptTask = document.querySelector("compTask");
+const cTask = document.querySelector("#cTask > ul");
 const error = document.querySelector("#listError");
 const input = document.querySelector("#newtask");
 const delButton = document.querySelector("#deletebutton");
@@ -41,13 +41,38 @@ inputButton.addEventListener("click", function () {
             error.innerText = "";
 
             let newItem = document.createElement("li");
-   
+
             newItem.innerHTML = inputText.trim() + " " + "<b>" + "Start:" + "</b>" + " " + dateTime;
 
             listArr.push(inputText.trim().toLowerCase());
+
             list.appendChild(newItem);
+
+
+
+            /*newValue.addEventListener("click", function(){
+
+                let chBox = document.createElement("input");
+                chBox.type = "checkbox";
+                chBox.name = "checkbox1";
+                chBox.value = "checkbox";
+                chBox.id = "checkbox1";
+                chBox.checked = "true";
+                chBox.disabled = "true";
+            
+                cTask.appendChild(chBox);
+               cTask.appendChild(list.children[0]);   
+            });
+              //  if(true) {
+           // function removeEventListener()
+           // {
+           //     document.querySelector("#cTask > ul > li").removeEventListener("click", function(){});
+           // } }
+            //newValue.removeEventListener("click", function(){});*/
+
             input.value = "";
             input.focus();
+
         }
 
     event.preventDefault();
@@ -58,14 +83,14 @@ inputButton.addEventListener("click", function () {
 // Code borrowed to get the concept of EventListner function
 
 delButton.addEventListener("click", () => {
-   
-    list.children[2].remove();
-    
+
+    list.children[1].remove();
+
 });
 
 function AddTask_List() {
 
-    compTask.appendChild(list.children[2]);
+
     // @link https://stackoverflow.com/questions/866239/creating-the-checkbox-dynamically-using-javascript
     //Creating dynamic checkboxes
     let chBox = document.createElement("input");
@@ -76,18 +101,22 @@ function AddTask_List() {
     chBox.checked = "true";
     chBox.disabled = "true";
 
-    compTask.appendChild(chBox);
-    
+    cTask.appendChild(chBox);
+    cTask.appendChild(list.children[1]);
+
 }
+
 
 delButton1.addEventListener("click", () => {
     let remChBox = document.querySelector("#checkbox1");
-    let remLi = document.querySelector("#compTask > li");
+    let remLi = document.querySelector("#cTask>ul>li");
     if (true) {
         remLi.remove();
         remChBox.remove();
-        }
+        remLi.removeEventListener("click", function () { });
+    }
 });
+
 
 
 
