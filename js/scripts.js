@@ -47,29 +47,7 @@ inputButton.addEventListener("click", function () {
             listArr.push(inputText.trim().toLowerCase());
 
             list.appendChild(newItem);
-
-
-
-            /*newValue.addEventListener("click", function(){
-
-                let chBox = document.createElement("input");
-                chBox.type = "checkbox";
-                chBox.name = "checkbox1";
-                chBox.value = "checkbox";
-                chBox.id = "checkbox1";
-                chBox.checked = "true";
-                chBox.disabled = "true";
             
-                cTask.appendChild(chBox);
-               cTask.appendChild(list.children[0]);   
-            });
-              //  if(true) {
-           // function removeEventListener()
-           // {
-           //     document.querySelector("#cTask > ul > li").removeEventListener("click", function(){});
-           // } }
-            //newValue.removeEventListener("click", function(){});*/
-
             input.value = "";
             input.focus();
 
